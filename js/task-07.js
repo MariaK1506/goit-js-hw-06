@@ -5,9 +5,9 @@ const refs = {
 
 refs.input.addEventListener("input", onInputChange);
 
-function onInputChange() {
+function onInputChange(event) {
   //   console.log(refs.input.value);
-  const sizeText = refs.input.value + "px";
+  const sizeText = event.currentTarget.value + "px";
 
   refs.span.style.fontSize = sizeText;
 }

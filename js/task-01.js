@@ -14,13 +14,3 @@ const category = [...quantityItemEl]
   .join("\n");
 
 console.log(category);
-
-// 2 вариант
-// const category = [...quantityItemEl]
-//   .map(
-//     (element) =>
-//       `Category: ${element.firstElementChild.textContent}\nElements: ${element.children[1].children.length}`
-//   )
-//   .join("\n");
-
-// console.log(category);
