@@ -1,17 +1,17 @@
 const ingredients = [
-  'Potatoes',
-  'Mushrooms',
-  'Garlic',
-  'Tomatos',
-  'Herbs',
-  'Condiments',
+  "Potatoes",
+  "Mushrooms",
+  "Garlic",
+  "Tomatos",
+  "Herbs",
+  "Condiments",
 ];
 
-const list = document.querySelector('ul');
+const list = document.querySelector("ul");
 
 // 1 вариант
 
-// const elements = ingredients.map(ingredient => { 
+// const elements = ingredients.map(ingredient => {
 // const createIngr = document.createElement('li')
 
 // createIngr.textContent = ingredient;
@@ -24,16 +24,15 @@ const list = document.querySelector('ul');
 
 // 2 вариант
 
-const makeIngredientsElements = ingredients => {
-  return ingredients.map(ingredient => {
-
-    const createIngr = document.createElement('li')
+const makeIngredientsElements = (ingredients) => {
+  return ingredients.map((ingredient) => {
+    const createIngr = document.createElement("li");
 
     createIngr.textContent = ingredient;
-    createIngr.classList.add('item')
+    createIngr.classList.add("item");
     return createIngr;
-  })
-}
-const elements = makeIngredientsElements(ingredients)
-// console.log(elements)
+  });
+};
+const elements = makeIngredientsElements(ingredients);
+console.log(elements);
 list.append(...elements);
