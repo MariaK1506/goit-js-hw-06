@@ -1,21 +1,20 @@
-const btnDecrem = document.querySelector('button[data-action="decrement"]');
-console.log(btnDecrem);
-const btnIncrem = document.querySelector('button[data-action="increment"]');
-console.log(btnIncrem);
+const counter = {
+  btnDecrem: document.querySelector('button[data-action="decrement"]'),
+  btnIncrem: document.querySelector('button[data-action="increment"]'),
+  span: document.querySelector("#value"),
+};
 
-btnDecrem.addEventListener("click", onBtnDecremClick);
+counter.btnDecrem.addEventListener("click", onBtnDecremClick);
+counter.btnIncrem.addEventListener("click", onBtnIncremClick);
 
-// function handleBtnDecremClick() {
-//   let counterValue = 0;
-//   console.log("КЛИК", (counterValue += 1));
-// }
+let counterValue = 0;
 
-// function btnDecremClickHandler() {
-//   let counterValue = 0;
-//   console.log("КЛИК", (counterValue += 1));
-// }
+function onBtnDecremClick() {
+  counterValue -= 1;
+  counter.span.textContent = counterValue;
+}
 
-function onBtnDecremClick(event) {
-  let counterValue = 0;
-  console.log("КЛИК", (counterValue += 1));
+function onBtnIncremClick() {
+  counterValue += 1;
+  counter.span.textContent = counterValue;
 }
