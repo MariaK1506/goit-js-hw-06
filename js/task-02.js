@@ -13,11 +13,11 @@ const list = document.querySelector("ul");
 
 const makeIngredientsElements = (ingredients) => {
   return ingredients.map((ingredient) => {
-    const createIngr = document.createElement("li");
+    const itemEl = document.createElement("li");
 
-    createIngr.textContent = ingredient;
-    createIngr.classList.add("item");
-    return createIngr;
+    itemEl.textContent = ingredient;
+    itemEl.classList.add("item");
+    return itemEl;
   });
 };
 const elements = makeIngredientsElements(ingredients);
