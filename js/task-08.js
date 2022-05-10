@@ -9,13 +9,13 @@ function onFormSubmit(event) {
   const mail = formElements.email.value;
   const password = formElements.password.value;
   const formData = { mail, password };
-  console.log(formData);
 
-  console.log(`Login: ${mail}, Password: ${password}`);
   if (mail === "" || password === "") {
     return alert("Внимание! Все поля должны быть заполнены!");
+  } else if (mail !== "" || password !== "") {
+    console.log(formData);
+    console.log(`Login: ${mail}, Password: ${password}`);
   }
-
   event.currentTarget.reset();
 
   //   const formData = new FormData(event.currentTarget);
